@@ -58,7 +58,7 @@ def get_short_url():
         try:
             # Check URL validity
             if len(long_url) > config.long_url_length:
-                return json.dumps(['failure', 'Url length > 2000 chars'])
+                return json.dumps(['failure', 'Url length not accepted'])
             res = urllib.urlopen(long_url)
             if res.getcode() not in (200, 301, 302):
                 return json.dumps(['failure', 'Url does not seem to be valid'])
