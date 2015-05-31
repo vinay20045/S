@@ -2,7 +2,7 @@ S
 =
 *Your very own URL shortening service*
 
-This is a Python2.7 based flask application which is a different take at url shorteners. Most url shortening scripts use on-the-fly base conversion or simple hashing for generation of short urls. S precomputes all possible combinations on a set of url safe characters with appropriate n and r values. It is very simple and configurable.
+**S** is a Python2.7 based flask application which is a different take at url shorteners. Most url shortening scripts use on-the-fly base conversion or simple hashing for generation of short urls. S precomputes all possible combinations on a set of url safe characters with appropriate n and r values. It is very simple and configurable.
 
 Setup
 -----
@@ -96,7 +96,7 @@ On my Mac with 8 GB RAM (and not dedicatedly running this app) took ~35 seconds 
 Ideas to Scale
 --------------
 If you do want to scale your service beyond a billion URLs it is possible by one of the following ways.<br>
-1. Increase the r_max and regenerate codes. With an r_max of 6 you can serve ~69 billion URLs. Just imagine if you push r_max of 10!! All you'll need is proper infra to support such scale.<br>
+1. Increase the r_max and regenerate codes. With an r_max of 6 you can serve ~69 billion URLs. Just imagine if you push r_max to 10!! All you'll need is proper infra to support such scale.<br>
 2. If you are willing to spend some time in tinkering with the code, then you can introduce the logic of a prefix for your short_urls. Ex:
 ```http://your.domain/xjgkt``` will now look like ```http://your.domain/s/xjjng```
 
