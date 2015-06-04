@@ -16,7 +16,7 @@ Setup
     * Add more ```blocked_short_codes``` as necessary
 * Start redis database service
 * [IMPORTANT] Run the ```generate_short_code.py``` script and wait until it is complete (This might take a few seconds to a few hours based on your char_set, r_min and r_max values. Check below for benchmarks)
-* Start flask app
+* Start flask app ```python path/to/s.py``` (You might want to use an &)
 * Point your domain to this location and you are done!!
 
 PS 1: You do not have to worry about having a proxy for serving requests as there are no static files involved anywhere.
